@@ -1,0 +1,7 @@
+ErrorDocument 404 http://localhost/phpCRUD/404
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^home index.php
+RewriteRule ^editStudent/([0-9]+) edit_student.php?id=$1 [NC,L]
